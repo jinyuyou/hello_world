@@ -1,0 +1,8 @@
+def fb(n):
+    if n == 1 or n == 2:
+        return 1
+    else:
+        return fb(n - 1) + fb(n - 2)
+number = int(input('请输入一个正整数：'))
+result = fb(number)
+print('斐波那契数列中第 %d 个数字是 %d'%(number,result))
