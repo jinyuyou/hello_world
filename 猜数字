@@ -6,7 +6,7 @@ temp = input('输入你猜的数字（1-10）:')
 i = 0
 while not temp.isdigit():
     print('输入错误，请输入一个正整数（1-10）')
-    temp = input('输入你猜的数字:')
+    temp = input('输入你猜的数字（1-10）:')
     continue
 
 else:
