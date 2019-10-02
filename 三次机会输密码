@@ -1,17 +1,15 @@
-‘‘‘设计一个验证用户密码程序，用户只有三次机会输入错误，
+'''设计一个验证用户密码程序，用户只有三次机会输入错误，
 
-不过如果用户输入的内容中包含"*"则不计算在内。’’’
-i = 1
+不过如果用户输入的内容中包含"*"则不计算在内。'''
+i = 3
 password = '123456'
-while i <= 3 :
-    n = str(input('please enter your pass word with 6 numbers:'))
-    if i < 3 and n == password:
-        print('password ok,welcome!')
+while i:
+    pw = input('请输入密码：')
+    if pw == password:
+        print('密码正确，进入。。。')
         break
-    elif 0<= i <= 3 and '*' not in n:
-        print('password wrong,you have',(3-i),'times to try')
-        i += 1
+    elif '*' in pw:
+        print('密码不能包含‘*’')
     else:
-        print('password must have no * included')
-else:
-    print('opps,no chance again')
+        print('输入错误，你还有%d'% (i-1) + '次机会')
+        i -= 1
