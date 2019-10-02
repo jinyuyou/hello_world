@@ -4,16 +4,16 @@
 编程计算摸出球的各种颜色搭配’’’
 
 import random
-ball = ['b','b','b','b','b','b','y','y','y','r','r','r']
-a = 1
-while a <= 8:
+ball = ['0','1','2','3','4','5','6','7','8','9','10','11']
+a = 8
+choice = []
+while a:
     n = random.randint (0,(len(ball)-1))
-    for i in str(n):
-        choice = []
-        choice.append(ball[int(n-1)])
-        del ball[int(n-1)]
-    a += 1
-    print(choice)
+    choice.append(ball[n])
+    del ball[n]
+    a -= 1
+print(choice)
+
 
 
 i=0
