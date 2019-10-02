@@ -6,14 +6,14 @@ temp = input('输入你猜的数字（1-10）:')
 i = 0
 while not temp.isdigit():
     print('输入错误，请输入一个正整数（1-10）')
-    temp = input('输入你猜的数字（1-10）:')
+    temp = input('输入你猜的数字:')
     continue
 
 else:
     n = int(temp)
-    while i < 3:
+    while i < 2:
         if n == number:
-            print('猜对啦')
+            print('猜对啦\n但是没有奖励')
             break
         elif n > number:
             print('太大啦')
@@ -24,8 +24,7 @@ else:
         n = int(temp)
     else:
         if n == number:
-            print('猜对啦')
-            print('但是没有奖励')
+            print('猜对啦\n但是没有奖励')
         else:
             print('猜错啦，机会用完啦')
 print('游戏结束')
